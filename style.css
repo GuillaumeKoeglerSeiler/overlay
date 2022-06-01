@@ -1,0 +1,46 @@
+body{
+    font-family: 'Nunito', sans-serif;
+}
+img{
+    vertical-align: middle;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.carte{
+    border: 1px solid lightgray;
+    padding: 3px;
+    box-shadow: 2px 2px 2px lightgrey;
+    width: 300px;
+    margin: auto;
+    position: relative;
+    margin-bottom: 20px;
+}
+.carte img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+h1{
+    text-align: center;
+}
+.carte .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    font-size: 2.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0) rotate(90deg);
+    transition: 0.3s;
+    transform-origin: 25% 80%;
+}
+.carte:hover .overlay{
+    transform: scale(1);
+}
